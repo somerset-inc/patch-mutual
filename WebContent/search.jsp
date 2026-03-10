@@ -30,6 +30,7 @@ IBM AltoroJ
 	
 		<%
 		String query = request.getParameter("query");
+		String id = request.getParameter("id");
 		String[] results = null;
 		if (query != null && query.trim().length()>0)
 			results = ServletUtil.searchSite(query, request.getSession().getServletContext().getRealPath("/static/"));
@@ -42,6 +43,7 @@ IBM AltoroJ
 		<p>No results were found for the query:<br /><br />
 		
 		<%= query %>
+		<%= id %>
 		
 		</div>    
     </td>	
